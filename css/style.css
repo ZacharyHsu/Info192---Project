@@ -1,0 +1,51 @@
+
+body {
+	background-image: url("../images/blackboard-think-education-idea.jpg");
+	background-position: center;
+	font-family: Georgia, Times, serif;
+	line-height: 1.4em;
+	margin: 0px;}
+	
+.wrapper {
+	width: 1000px;
+	padding: 5px;
+	margin: 20px auto 20px auto;
+	border: 5px solid #000000;
+	background-color: #ffffff;}
+	
+figure img	{
+	float: center;
+	width: 850px;
+	height: 450px;
+	padding: 5px;
+	margin: 20px;
+	border: 1px solid #eeeeee;}}
+h1 {
+	text-indent: -9999px;
+	width: 940px;
+	height: 130px;
+	margin: 0px;}
+.introduction {
+	float:left;
+	width: 40%;
+	background-color: #E8F6F7;
+	padding: 5px;
+	margin: 20px;
+	border: 5px solid #eeeeee;}
+.core {
+	float:left;
+	width: 45%;
+	margin-left: 20px;
+	background-color: #f2dede;
+	padding: 5px;
+	margin: 20px;
+	border: 5px solid #eeeeee;
+}
+
+hr {
+	display: block;
+	height:5px;
+	border-width:5px;
+	color:black;
+	background-color:black"
+}
