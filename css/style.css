@@ -19,12 +19,17 @@ figure img	{
 	height: 450px;
 	padding: 5px;
 	margin: 20px;
-	border: 1px solid #eeeeee;}}
+	border: 1px solid #eeeeee;}
 h1 {
-	text-indent: -9999px;
-	width: 940px;
-	height: 130px;
-	margin: 0px;}
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+	
 .introduction {
 	float:left;
 	width: 40%;
@@ -42,10 +47,44 @@ h1 {
 	border: 5px solid #eeeeee;
 }
 
+section.search {
+	width: 10px;
+	border-right: 1px solid #eeeeee;}	
+section.search p {
+	margin: 20px 10px 0 10px;
+	text-align: right; }
+	
+section.search input {
+	width: 20em;  }
+	
+section.countries {
+	width: 659px;
+}
+
+section figure {
+	float: left;
+	width: 290px;
+	height: 220px;
+	padding: 4px;
+	margin: 20px;
+	border: 2px solid #eeeeee;}
+	
+section figure img{
+	float: right;
+	width: 250px;
+	height: 180px;
+}
+
+section figcaption {
+	font-size: 70%;
+	text-align: left;}
+	
+	
 hr {
 	display: block;
 	height:5px;
 	border-width:5px;
 	color:black;
-	background-color:black"
+	background-color:black";
 }
+

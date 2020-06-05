@@ -11,9 +11,9 @@ const COUNTRIES = [
   	id: "country-2",
     country_title: "India",
     country_subtitle: "Fall 2020",
-    country_description: "Leave your perceptions at the temple door. A country best known for its innumerable deities, mouth-searing dishes, elaborate weddings, and multicolored sarees. Once you venture past these cliches, however, you realize that few places offer as many truly unique experiences to young and eager travelers as India does. Instead of Hyderabad, this time around our term will be based out of Mumbai, India’s most populous and multicultural city.", 
+    country_description: "Leave your perceptions at the temple door. A country best known for its innumerable deities, mouth-searing dishes, elaborate weddings, and multicolored sarees. This time around our term will be based out of Mumbai, India’s most populous and multicultural city.", 
     image: "images/India.jpg",
-    image_title: "India city"
+    image_title: "Gateway of India"
   }, 
 	{
   	id: "country-3",
@@ -21,7 +21,7 @@ const COUNTRIES = [
     country_subtitle: "Winter 2020",
     country_description: "Tradition and modernity combine for a timeless experience. Japan can always be counted on to stay much the same. Little will have changed in Hiroshima since our first visit in 2014, and our new students will likely enjoy the same arcades and okonomiyaki stalls as those who preceded them. ",
    	image: "images/Japan.jpg",
-    image_title: "Japan city"
+    image_title: "Japan Senbon Torii"
   }, 
 	{
   	id: "country-4",
@@ -31,4 +31,64 @@ const COUNTRIES = [
     image: "images/Spain.jpg",
     image_title: "Spain city"
   }
-]
+];
+
+function createCountryHTML(country) {
+	let countryHTML = $("<article>");
+	
+	let figure = $("<figure>");
+	let image = $("<img>", {src: country.image, alt: country.image_title});
+	let caption = $("<figcaption>" + country.image_title + "</figcaption>");
+	figure.append(image);
+	figure.append(caption);
+	countryHTML.append(figure);
+	
+	let title = $("<h3>" + country.country_title + "</h3>");
+	countryHTML.append(title);
+
+	let subtitle = $("<h4>" + country.country_subtitle + "</h4>");
+	countryHTML.append(subtitle);
+
+	let description = $("<p>" + country.country_description + "</p>");
+	countryHTML.append(description);
+
+	return countryHTML;
+}
+
+function displayCountries(countries) {
+	let countriesList = $("#countriesList");
+
+	// Empty previous courses
+	countriesList.empty();
+	for(let country of countries) {
+		let countryHTML = createCountryHTML(country);
+		countriesList.append(countryHTML);
+	}
+}
+
+
+
+
+$(document).ready(function(){
+	let mainCountries = [COUNTRIES[0], COUNTRIES[1], COUNTRIES[2], COUNTRIES[3]];
+
+	displayCountries(mainCountries);
+	
+	$("#searchText").on("keyup", search)
+});
+
+function search() {
+		let query = $("#searchText").val();
+		query = query.toLowerCase().trim();
+
+		let matches = [];
+		for(let country of COUNTRIES) {
+			let countryTitle = country.country_title.toLowerCase();
+			if(countryTitle.includes(query)) {
+				matches.push(country);
+			}
+		}
+
+
+		displayCountries(matches);
+}
