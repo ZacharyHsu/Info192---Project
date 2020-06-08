@@ -20,6 +20,9 @@ figure img	{
 	padding: 5px;
 	margin: 20px;
 	border: 1px solid #eeeeee;}
+header p {
+	color: #e80909;
+}
 h1 {
   display: block;
   font-size: 2em;
@@ -28,6 +31,12 @@ h1 {
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
+  color: #ffffff;
+  border: 1px solid #000000;
+  background-color: #e80909;
+  padding: 10px;
+  margin: 5px;
+  width: 36%;
 }
 	
 .introduction {
@@ -78,6 +87,13 @@ section figure img{
 section figcaption {
 	font-size: 70%;
 	text-align: left;}
+h4 {
+	color: #e80909;
+}
+
+footer {
+	font-size: 80%;
+	padding: 7px 0px 0px 20px;}
 	
 	
 hr {
